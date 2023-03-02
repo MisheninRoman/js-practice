@@ -23,12 +23,16 @@ for (let i = 0; i < 2; i++) {
   }
 }
 
-if (personalMovieDB.count < 10) {
+if (personalMovieDB.count < 10 && personalMovieDB.count > 0) {
   console.log("слишком мало");
-} else if (personalMovieDB.count > 10 && personalMovieDB.count < 30) {
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
   console.log("не плохо, но можно и лучше");
-} else if (personalMovieDB.count > 30) {
+} else if (personalMovieDB.count >= 30) {
   console.log("да вы человек голубых кровей");
+} else if (personalMovieDB.count < 1) {
+  console.log("ты кажется ошибся!");
+} else {
+  console.log("error");
 }
 
 console.log(personalMovieDB);
