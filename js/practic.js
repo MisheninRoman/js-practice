@@ -10,12 +10,25 @@ const personalMovieDB = {
   private: false,
 };
 
-const a = prompt("Последний просмотренный фильм?", "");
-const b = +prompt("На сколько его оцените?", "");
-const c = prompt("Последний просмотренный фильм?", "");
-const d = +prompt("На сколько его оцените?", "");
+for (let i = 0; i < 2; i++) {
+  const a = prompt("Последний просмотренный фильм?", ""),
+    b = +prompt("На сколько его оцените?", "");
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+  if (a != null && b != null && a != "" && b != "" && a.length < 51) {
+    personalMovieDB.movies[a] = b;
+    console.log("done");
+  } else {
+    console.log("FU");
+    i--;
+  }
+}
+
+if (personalMovieDB.count < 10) {
+  console.log("слишком мало");
+} else if (personalMovieDB.count > 10 && personalMovieDB.count < 30) {
+  console.log("не плохо, но можно и лучше");
+} else if (personalMovieDB.count > 30) {
+  console.log("да вы человек голубых кровей");
+}
 
 console.log(personalMovieDB);
