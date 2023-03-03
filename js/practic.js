@@ -52,4 +52,21 @@ function detecPersonalLvl() {
 }
 detecPersonalLvl();
 
-console.log(personalMovieDB);
+function showMyDB() {
+  if (personalMovieDB.private != true) {
+    console.log(personalMovieDB);
+  } else {
+    console.log("is private");
+  }
+}
+
+showMyDB();
+
+function writeYourGenres() {
+  for (let i = 1; i <= 3; i++) {
+    const genre = prompt(`Ваш любимый ${i} жанр `, "");
+    personalMovieDB.genres[i - 1] = genre;
+  }
+}
+
+writeYourGenres();
