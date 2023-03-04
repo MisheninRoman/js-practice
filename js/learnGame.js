@@ -13,6 +13,8 @@ const statHero = {
   armor: [],
 };
 
+// console.log(Object.keys(statHero).length);
+
 for (let i = 0; i < 1; i++) {
   // цикл задающий уточняющие вопросы
   const nameHero = prompt("Представься, жалкое существо!", "");
