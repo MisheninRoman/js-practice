@@ -115,3 +115,11 @@ const enemy = {
   strong: 35,
   armor: 30,
 };
+
+for (let key in enemy) {
+  console.log(
+    `Объект ${enemy} имеет свойство ${key} со значением ${enemy[key]}`
+  );
+}
+
+console.log(enemy);
