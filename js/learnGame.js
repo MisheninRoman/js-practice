@@ -123,3 +123,4 @@ for (let key in enemy) {
 }
 
 console.log(enemy);
+//idk why its not working

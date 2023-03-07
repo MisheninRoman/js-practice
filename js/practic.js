@@ -70,3 +70,18 @@ function writeYourGenres() {
 }
 
 writeYourGenres();
+
+function copyPersonalMDB(mainObj) {
+  let DBCopy = {};
+  let key;
+
+  for (key in mainObj) {
+    DBCopy[key] = mainObj[key];
+  }
+
+  return DBCopy;
+}
+
+const newPersonalMDB = copyPersonalMDB(personalMovieDB);
+
+console.log(newPersonalMDB);
