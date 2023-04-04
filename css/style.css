@@ -1,0 +1,18 @@
+body {
+    box-sizing: border-box;
+}
+
+#box {
+    width: 150px;
+    height: 150px;
+    background-color: crimson;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+    align-items: center;
+}
